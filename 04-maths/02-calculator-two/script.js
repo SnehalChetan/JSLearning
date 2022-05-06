@@ -14,6 +14,32 @@
 
     var performOperation = function(operation) {
         // perform the operation
+        console.log("operation = "+operation);
+                const val1 =parseInt(document.getElementById("op-one").value);
+                const val2 =parseInt(document.getElementById("op-two").value);
+                let res =0;
+        switch(operation) {
+            case 'addition':
+              // code block
+                 res = val1 + val2;
+                 alert("Addition of "+val1+" + "+val2+" = "+res);
+                break;
+            case 'substraction':
+                // code block
+                res = val1-val2;
+                alert("subtraction of "+val1+" - "+val2+" = "+res);
+                break;
+              case 'multiplication':
+                res= val1*val2;
+                alert("Multiplication of "+val1+" x "+val2+" = "+res);
+                break;
+            case 'division':
+                res= val1/val2;
+                alert("Division of "+val1+" / "+val2+" = "+res.toFixed(4));
+                break;
+            default:
+              alert("invalid input");
+          }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
