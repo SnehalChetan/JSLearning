@@ -12,5 +12,18 @@
 (function() {
 
     // your code here
+    const runButton = document.getElementById("run");
+    const colorVal = document.getElementById("color").value;
+ 
 
+    runButton.onclick=function(){
+        if(document.getElementById("color").value != ''){
+            console.log(document.getElementById("color").value);
+        }else{
+            console.log("reload page"+colorVal);
+        }
+        
+       
+        document.body.style.background = document.getElementById("color").value;  
+    }
 })();
