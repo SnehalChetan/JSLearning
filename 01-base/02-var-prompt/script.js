@@ -11,6 +11,11 @@
 
 (function() {
 
-    // your code here
+    const user = prompt("Enter your name : ");
+    if(user != ''){
+        console.log("welcome "+user);
+    }else{
+        console.log("Please enter your name");
+    }
 
 })();
