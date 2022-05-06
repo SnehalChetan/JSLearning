@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    const runButton = document.getElementById("run");
+    runButton.onclick=function(){
+        let birthDay = document.getElementById('dob-day').value;
+        let birthMonth = document.getElementById('dob-month').value;
+        let birtYear = document.getElementById('dob-year').value;
+         console.log("Selected BirthDate = "+birthDay+"/"+birthMonth+"/"+birtYear);
+         
+         alert("Selected Birthdate = "+birthDay+"/"+birthMonth+"/"+birtYear);
+    }
 
 })();
