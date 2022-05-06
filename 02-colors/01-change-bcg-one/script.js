@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    const redButton = document.getElementById("red");
+    const greenButton = document.getElementById("green");
+    const yellowButton = document.getElementById("yellow");
+    const blueButton = document.getElementById("blue");
+    redButton.onclick=function(){
+        document.body.style.background = "red";  
+    }
+    greenButton.onclick=function(){
+        document.body.style.background = "green";  
+    }
+    yellowButton.onclick=function(){
+        document.body.style.background = "yellow";  
+    }
+    blueButton.onclick=function(){
+        document.body.style.background = "blue";  
+    }
 
 })();
