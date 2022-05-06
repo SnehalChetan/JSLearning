@@ -12,5 +12,17 @@
 (function() {
 
     // your code here
+    
+    const runButton = document.getElementById("run");
+    runButton.onclick=function(){
+        const color = '#';
+        const colorChars = 'abcdef123456789';
+        for (let i = 0; i < 6; i++) {
+            color += colorChars.charAt(Math.floor(Math.random() * colorChars.length));
+        }console.log("Color = "+color);
+        if(color !=''){
+            document.body.style.background = color;
+        }
+    }
 
 })();
