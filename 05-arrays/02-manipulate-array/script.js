@@ -25,5 +25,15 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click",()=>{
+        console.log("Given fruits Array = "+fruits);
+        fruits.pop();//remove last element
+        fruits.shift();//removes first element
+
+        fruits.push("kiwi");//add last element
+        fruits.unshift("banana");//add first element
+        console.log("fruits array after changes = "+fruits);
+
+    });
 
 })();
