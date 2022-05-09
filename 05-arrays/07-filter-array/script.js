@@ -89,6 +89,20 @@
         },
     ];
 
+    var adults = new Array();
     // your code here
+    document.getElementById("run").addEventListener("click",()=>{
+    console.log("people array length = "+people.length);
+    people.forEach(person => {
+        if(person.age >=18){
+            adults.push(person);
+        }        
+    });
+    console.log("length of Adult array = "+adults.length);
+    console.log("Adult People = "+adults);
+    adults.forEach(person => {
+        console.log(`firstname : ${person.firstname} , lastnaem : ${person.lastname} , age : ${person.age}`);
+    });
+});
 
 })();
