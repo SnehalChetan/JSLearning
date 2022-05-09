@@ -27,6 +27,10 @@
         "raisin",
         "cerise",
     ];
-
+document.getElementById("run").addEventListener("click",()=>{
+    console.log("Given Array = "+fruits+" length = "+fruits.length);
+    console.log("Unique array = "+[...new Set(fruits)]);
+});
     // your code here
+
 })();
