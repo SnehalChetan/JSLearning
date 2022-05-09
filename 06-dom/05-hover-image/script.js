@@ -12,5 +12,12 @@
 (function() {
 
     // your code here
+    const imgTag = document.querySelector("img:not([class])"); //As image tag don't have class
+
+    const dataHoverVal = imgTag.getAttribute("data-hover");
+    
+    imgTag.src = dataHoverVal; //assign value directly to attribute.
+
+    imgTag.setAttribute("src",dataHoverVal); //assign value using setAttribute method
 
 })();
