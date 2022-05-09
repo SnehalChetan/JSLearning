@@ -27,5 +27,9 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click",()=>{
+        fruits.forEach((fruit,index)=>{
+            console.log(index +":"+ fruit); //`${index} : ${fruit}`
+        });
+    });
 })();
