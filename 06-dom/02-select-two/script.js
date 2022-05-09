@@ -12,5 +12,7 @@
 (function() {
 
     // your code here
-
+//    document.getElementById("target").innerHTML="owned"; //can be replaced by
+//The other single element selector is the querySelector(). This function is more versatile, as you can pass it any CSS selector string. However, you can still only use it to select one element at a time.
+    document.querySelector('#target').innerHTML="owned";
 })();
