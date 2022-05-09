@@ -12,5 +12,8 @@
 (function() {
 
     // your code here
-
+    let allTarget = document.getElementsByClassName("target");
+    for(let i =0 ;i<allTarget.length;i++){
+        allTarget[i].innerHTML="owned";
+    }
 })();
