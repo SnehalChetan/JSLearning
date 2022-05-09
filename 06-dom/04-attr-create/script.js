@@ -12,5 +12,11 @@
 (function() {
 
     // your code here
-
+    const srcElement =document.getElementById("source");
+    const imgSrc = srcElement.getAttribute("data-image");
+        //console.log(imgSrc);
+    const ele = document.createElement('img');
+    ele.src=imgSrc;
+    document.querySelector("#target").appendChild(ele);
+    srcElement.remove();
 })();
