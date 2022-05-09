@@ -40,5 +40,12 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click",()=>{
+        people.forEach((person,index)=>{
+            console.log(`Name : ${person.firstname}`);//display name using template string
+            //or
+            //console.log("Frst Name = "+person.firstname);
+        });
+    });
 
 })();
