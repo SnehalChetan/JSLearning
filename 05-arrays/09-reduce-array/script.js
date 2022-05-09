@@ -90,5 +90,11 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click",()=>{
+      var total = people.reduce(function(sum,person){
+            return sum = sum + person.age;
+        },0);
+        console.log("toatl = "+total);
+    });
+    
 })();

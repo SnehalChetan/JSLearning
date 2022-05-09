@@ -99,10 +99,24 @@
         }        
     });
     console.log("length of Adult array = "+adults.length);
-    console.log("Adult People = "+adults);
+
     adults.forEach(person => {
         console.log(`firstname : ${person.firstname} , lastnaem : ${person.lastname} , age : ${person.age}`);
     });
+
+/**OR**/
+/*
+*   using filter and map function
+*/
+var PersonArr = people.filter(function (person) {
+    return person.age >= 18;
+  }).map(function (person) {
+    return person.firstname;
+  });
+
+  console.log("PersonArr = "+PersonArr);
+
+
 });
 
 })();
