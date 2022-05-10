@@ -12,5 +12,17 @@
 (function() {
 
     // your code here
+    //regular expression for atlest two digits /^(\D*\d){2}/
+    const inputText =document.getElementById("pass-one");
+    
+    document.querySelector("#pass-one").addEventListener("keypress",()=>{
+        let spanData = document.getElementById("validity");
+        if(inputText.value.match(/^(\D*\d){2}/) && inputText.value.length >= 8){
 
+            console.log("data = "+inputText.value);
+            spanData.innerHTML="OK";
+    }else{
+        console.log("else section");
+    }
+    });
 })();
