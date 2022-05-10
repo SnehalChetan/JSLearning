@@ -20,5 +20,18 @@
     ];
 
     // your code here
+    const parent = document.querySelector(".material");
+    let len = gallery.length;
+    let imgIndex =1;
+    document.querySelector("#next").addEventListener("click",()=>{
+        if(imgIndex <= len){
+            parent.querySelector("img").src=gallery[imgIndex];
+            imgIndex++;
+        }else{
+            imgIndex=0;
+            parent.querySelector("img").src=gallery[imgIndex];
+            imgIndex++;
+        }
+    });
 
 })();
