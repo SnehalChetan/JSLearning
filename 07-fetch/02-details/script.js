@@ -15,7 +15,7 @@
     document.querySelector("#run").addEventListener("click",()=>{
         let getHero  = document.querySelector("#hero-id").value;
         displayHeroData(getHero,url);
-   
+    });
 
     async function displayHeroData(getHero,url){
         const responseHero = await getHeroData(url);
@@ -42,8 +42,8 @@
     } 
     async function getHeroData(url){
         let heroData = await fetch(url);
-        let heroJson = heroData.json();
+        let heroJson = await heroData.json();
         return heroJson;
     }
-});
+
 })();

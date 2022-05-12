@@ -38,7 +38,6 @@ document.getElementById("run").addEventListener("click",()=>{
 */
     (async ()=>{
         console.log(await getData(url));
-    
     })();
 
     });
