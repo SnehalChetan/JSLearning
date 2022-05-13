@@ -11,4 +11,42 @@
 
 (() => {
     // your code here
+    const url = "../../_shared/api.json";
+    var arrayHero = new Array();
+    // on page load event fetch json array and pass it to new array to if the user can insert multiple entries to array.
+    (async ()=>{   
+        try {
+            const fetchResponse = await fetch(`../../_shared/api.json`);
+            const data = await fetchResponse.json();
+            arrayHero = data.heroes;
+        } catch (e) {
+            console.log("error");
+            console.log(e);
+        } 
+    })();
+
+    document.getElementById("run").addEventListener("click",()=>{
+        const heroName = document.getElementById("hero-name").value;
+        const heroAlterEgo = document.getElementById("hero-alter-ego").value;
+        const heroPowers = document.getElementById("hero-powers").value.split(',');
+        if(heroName == '' || heroAlterEgo == '' || heroPowers == ''){
+            alert("please enter all data");
+        } else{
+            insertHero(heroName,heroAlterEgo,heroPowers);
+        }
+    });
+   function insertHero(heroName,heroAlterEgo,heroPowers){
+        
+        let len =arrayHero.length;
+        let newHeroID = len+1;
+        let newHero = {id: newHeroID,name:heroName,alerEgo:heroAlterEgo,abilities:heroPowers};
+        arrayHero.push(newHero);
+        console.log(arrayHero);/**/
+    }
+/* */
+   
+    //const result = await response.json();
+    //console.log(response);
+    
+    
 })();
